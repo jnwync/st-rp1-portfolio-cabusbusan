@@ -1,4 +1,80 @@
-export const skills = [
+export const BioData = {
+  name: "Jon Wayne Cabusbusan",
+  roles: ["Full Stack Developer", "Gamer", "Software Engineer", "Programmer"],
+  description:
+    "I am a dedicated and aspiring software engineering student with a strong passion for technology and a desire to make a meaningful impact in the world of software development. Throughout my academic journey, I have developed a solid foundation in programming, data structures, and algorithms, with a focus on honing my problem-solving skills. I am a quick learner, always eager to explore new technologies and embrace new challenges.",
+  github: "https://github.com/jnwync",
+  resume: "",
+  linkedin: "",
+  twitter: "",
+  insta: "https://www.instagram.com/jnwyn_/",
+  facebook: "https://www.facebook.com/wayne.cabusbusan/",
+};
+
+export const EducationData = [
+  {
+    id: 0,
+    img: "https://tse4.mm.bing.net/th?id=OIP.dAi_hvN1RvnY9xU5LzJ00gHaHa&pid=Api",
+    school: "Central Philippine University, Philippines",
+    date: "2021-2025",
+    desc: "I am currently enrolled in the Bachelor of Science in Software Engineering program at Central Philippine University. This academic journey has equipped me with a strong foundation in software development, problem-solving, and programming, providing me with the skills and knowledge necessary to excel in the dynamic field of software engineering. I am committed to honing my expertise in this ever-evolving discipline and am eager to apply my education to real-world challenges.",
+    degree: "Bachelor of Science - Software Engineering",
+  },
+  {
+    id: 1,
+    img: "https://techcrunch.com/?attachment_id=1878801",
+    school: "StackTrek",
+    date: "2023",
+    desc: "I am proud to have successfully completed a comprehensive web development bootcamp at Stacktrek. This immersive program has equipped me with hands-on experience in front-end and back-end web development, along with expertise in various programming languages and web technologies. Through rigorous training and practical projects, I have gained the skills necessary to build dynamic and user-friendly web applications. This bootcamp experience has further ignited my passion for web development, and I'm excited to leverage my newly acquired knowledge to contribute effectively in the web development industry.",
+    degree: "Internship",
+  },
+];
+
+export const ExperiencesData = [
+  {
+    id: 0,
+    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    role: "Intern",
+    company: "Stacktrek",
+    date: "2023",
+    desc: "I am actively engaged in learning web development, with a primary focus on the PERN (PostgreSQL, Express, React, Node.js) stack, in addition to exploring various other libraries and frameworks. ",
+    skills: [
+      "PostgreSQL",
+      "Express Js",
+      "React Js",
+      "Node Js",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+    ],
+  },
+];
+
+export const ProjectsData = [
+  {
+    id: 0,
+    title: "Returnia",
+    date: "2023",
+    description:
+      "The mission of Returnia is to simplify the process of recovering lost items, promote responsible handling of found belongings, and reduce the environmental impact associated with physical lost and found systems. This innovative web application harnesses technology to foster a sense of community, connectivity, and responsible ownership, ultimately making the world a more considerate and connected place.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    tags: [
+      "PostgreSQL",
+      "Express Js",
+      "React Js",
+      "Node Js",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+    ],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Trackify",
+    webapp: "https://trackify.duckdns.org",
+  },
+];
+
+export const SkillsData = [
   {
     title: "Frontend",
     skills: [
@@ -88,4 +164,9 @@ export const skills = [
       },
     ],
   },
+];
+
+export const TimeLineData = [
+  { year: 2021, text: "Enrolled as SE student" },
+  { year: 2023, text: "Completed StackTrek Bootcamp" },
 ];
