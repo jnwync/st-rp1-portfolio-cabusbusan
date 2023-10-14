@@ -27,7 +27,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center">
+    <div
+      className="relative z-10 flex flex-col items-center justify-center"
+      id="contact"
+    >
       <div className="flex flex-col items-center w-full max-w-screen-xl gap-12 p-12">
         <div className="mt-5 text-4xl font-semibold text-center text-primary">
           Contact
@@ -47,19 +50,19 @@ const Contact = () => {
           <input
             className="flex-1 p-3 text-2xl bg-transparent bg-black border-2 border-red-800 rounded-lg outline-none text-primary"
             type="text"
-            placeholder="nyew@gmail.com"
+            placeholder="E-mail"
             name="from_email"
           />
           <input
             className="flex-1 p-3 text-2xl bg-transparent bg-black border-2 border-red-800 rounded-lg outline-none text-primary"
             type="text"
-            placeholder="Jon Wayne"
+            placeholder="Name"
             name="from_name"
           />
           <input
             className="flex-1 p-3 text-2xl bg-transparent bg-black border-2 border-red-800 rounded-lg outline-none text-primary"
             type="text"
-            placeholder="Business"
+            placeholder="Subject"
             name="subject"
           />
           <textarea

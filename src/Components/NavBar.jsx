@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BioData } from "../datacontent/Datas";
 import { FaBars } from "react-icons/fa";
-import { DiCssdeck } from "react-icons/di";
+import nyewlogo from "../images/nyewlogo.png";
 import { darkTheme, lightTheme } from "../../public/Theme";
+import github from "../images/github.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,17 +24,18 @@ const Navbar = () => {
   const isMobile = windowWidth <= 960;
   const showFaBars = isMobile || isOpen;
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div
-      className={`bg-${darkTheme.card_light} h-20 flex items-center justify-center text-lg sticky top-0 z-10 transition-all duration-300 ease-in-out`}
-    >
+    <div className="sticky top-0 z-50 flex items-center justify-center h-20 text-lg transition-all duration-300 ease-in-out bg-black">
       <div className="z-10 flex items-center justify-between w-full h-16 max-w-screen-lg px-6 mx-auto">
         <div className="flex items-center justify-start w-4/5 px-6 text-decoration-none">
           <Link to="/" className="flex items-center text-white">
-            <DiCssdeck className="text-3xl" />
+            <img className="w-16 h-16 rounded-full" src={nyewlogo} alt="Logo" />
             <span className="px-1 font-bold text-18">Portfolio</span>
           </Link>
-          Logo
         </div>
         {showFaBars && (
           <div
@@ -42,97 +44,57 @@ const Navbar = () => {
             } absolute top-0 right-0 transform -translate-x-full translate-y-12 text-1.5rem cursor-pointer text-theme-text_primary`}
             style={{ color: darkTheme.text_primary }}
           >
-            <FaBars
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            />
+            <FaBars onClick={toggleMenu} />
           </div>
         )}
         <div className="flex items-center justify-center w-full gap-8 px-6 list-none md:flex">
-          {/* NavItems */}
-          <div
-            className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
-            style={{ color: darkTheme.text_primary }}
-            href="#about"
-          >
-            About
-          </div>
-          <div
-            className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
-            style={{ color: darkTheme.text_primary }}
-            href="#skills"
-          >
-            Skills
-          </div>
-          <div
-            className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
-            style={{ color: darkTheme.text_primary }}
-            href="#experience"
-          >
-            Experience
-          </div>
-          <div
-            className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
-            style={{ color: darkTheme.text_primary }}
-            href="#projects"
-          >
-            Projects
-          </div>
-          <div
-            className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
-            style={{ color: darkTheme.text_primary }}
+          <NavItem label="About" href="#about" toggleMenu={toggleMenu} />
+          <NavItem label="Skills" href="#skills" toggleMenu={toggleMenu} />
+          <NavItem
+            label="Experiences  "
+            href="#experiences"
+            toggleMenu={toggleMenu}
+          />
+          <NavItem label="Projects" href="#projects" toggleMenu={toggleMenu} />
+          <NavItem
+            label="Education"
             href="#education"
-          >
-            Education
-          </div>
+            toggleMenu={toggleMenu}
+          />
+          <NavItem label="Contact" href="#contact" toggleMenu={toggleMenu} />
         </div>
         <div className="flex items-center justify-end h-full px-6 w-80 sm:flex">
-          <button
-            className="flex items-center justify-center px-5 font-medium no-underline transition-all ease-in-out border-2 cursor-pointer border-primary h-70p rounded-2xl text-primary text-16 duration-600 hover:bg-primary hover:text-white"
-            style={{ borderColor: darkTheme.primary, color: darkTheme.primary }}
-          >
-            Github Profile
-          </button>
+          <a href="https://github.com/jnwync" target="_blank">
+            <button className="flex items-center justify-center px-5 font-medium no-underline transition-all ease-in-out border-2 border-red-800 cursor-pointer border-primary h-70p rounded-2xl text-primary text-16 duration-600 hover:bg-primary hover:text-white">
+              <img className="w-30 h-30" src={github} alt="GitHub Profile" />
+            </button>
+          </a>
         </div>
         {isMobile && isOpen && (
           <div className="md:hidden">
             <div className="block">
-              <a
-                href="#about"
-                className="block px-4 py-2 font-semibold transition duration-200 ease-in-out cursor-pointer text-theme-text_primary hover:text-theme-primary"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="block px-4 py-2 font-semibold transition duration-200 ease-in-out cursor-pointer text-theme-text_primary hover:text-theme-primary"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Skills
-              </a>
-              <a
+              <NavItem label="About" href="#about" toggleMenu={toggleMenu} />
+              <NavItem label="Skills" href="#skills" toggleMenu={toggleMenu} />
+              <NavItem
+                label="Experience"
                 href="#experience"
-                className="block px-4 py-2 font-semibold transition duration-200 ease-in-out cursor-pointer text-theme-text_primary hover:text-theme-primary"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Experience
-              </a>
-              <a
+                toggleMenu={toggleMenu}
+              />
+              <NavItem
+                label="Projects"
                 href="#projects"
-                className="block px-4 py-2 font-semibold transition duration-200 ease-in-out cursor-pointer text-theme-text_primary hover:text-theme-primary"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Projects
-              </a>
-              <a
+                toggleMenu={toggleMenu}
+              />
+              <NavItem
+                label="Education"
                 href="#education"
-                className="block px-4 py-2 font-semibold transition duration-200 ease-in-out cursor-pointer text-theme-text_primary hover:text-theme-primary"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Education
-              </a>
+                toggleMenu={toggleMenu}
+              />
+              <NavItem
+                label="Contact"
+                href="#contact"
+                toggleMenu={toggleMenu}
+              />
             </div>
             <a
               href={BioData.github}
@@ -145,6 +107,18 @@ const Navbar = () => {
           </div>
         )}
       </div>
+    </div>
+  );
+};
+
+const NavItem = ({ label, href, toggleMenu }) => {
+  return (
+    <div
+      className="font-medium no-underline transition-colors duration-200 ease-in-out cursor-pointer text-primary hover:text-primary"
+      style={{ color: darkTheme.text_primary }}
+      onClick={toggleMenu}
+    >
+      <a href={href}>{label}</a>
     </div>
   );
 };

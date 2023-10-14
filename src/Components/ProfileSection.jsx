@@ -2,7 +2,7 @@ import React from "react";
 import wallpaper from "../images/wallpaper.jpg";
 import Typewriter from "typewriter-effect";
 import { BioData } from "../datacontent/Datas";
-import img from "../images/WayneImage.png";
+import img from "../images/WayneRedimage.png";
 import { darkTheme, lightTheme } from "../../public/Theme";
 
 const ProfileSection = () => {

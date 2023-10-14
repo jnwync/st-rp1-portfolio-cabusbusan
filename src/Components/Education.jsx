@@ -4,7 +4,10 @@ import EducationCard from "./EducationCard";
 
 const Education = () => {
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center py-0 md:py-60">
+    <div
+      className="relative z-10 flex flex-col items-center justify-center py-0 bg-black md:py-60"
+      id="education"
+    >
       <div className="w-full max-w-3xl">
         <h1 className="text-5xl font-extrabold text-center text-white ">
           Education

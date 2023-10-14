@@ -1,3 +1,5 @@
+import returnia from "../images/returnia.png";
+
 export const BioData = {
   name: "Jon Wayne Cabusbusan",
   roles: ["Full Stack Developer", "Gamer", "Software Engineer", "Programmer"],
@@ -33,7 +35,7 @@ export const EducationData = [
 export const ExperiencesData = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    img: "https://techcrunch.com/wp-content/uploads/2019/09/StackTrek_Logos_Selected-02-Roger-Reyes.png?resize=680",
     role: "Intern",
     company: "Stacktrek",
     date: "2023",
@@ -57,8 +59,7 @@ export const ProjectsData = [
     date: "2023",
     description:
       "The mission of Returnia is to simplify the process of recovering lost items, promote responsible handling of found belongings, and reduce the environmental impact associated with physical lost and found systems. This innovative web application harnesses technology to foster a sense of community, connectivity, and responsible ownership, ultimately making the world a more considerate and connected place.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    image: `${returnia}`,
     tags: [
       "PostgreSQL",
       "Express Js",
@@ -85,7 +86,7 @@ export const SkillsData = [
       },
       {
         name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+        image: "https://icons8.com/icon/20909/html-5",
       },
       {
         name: "JavaScript",
